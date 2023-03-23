@@ -8,22 +8,14 @@ int main()
     int a, b, n, m, tmin, tmax;
     int tmina, tminb, tmaxa, tmaxb;
     cin >> a >> b >> n >> m;
-
     if (((a > b) && (n > m)) || ((a<b)&&(n<m))){
             cout << -1 << endl;
             return 0;
-    }
-        
-
+    }   
     tminb = (m - 1) * (1 + b) + 1;
     tmaxa = n * (1 + a) + a;
-
     tmina = (n - 1) * (1 + a) + 1;
     tmaxb = m * (1 + b) + b;
-
-    cout << "tmina = " << tmina << " tmaxa=" << tmaxa << endl;
-    cout << "tminb = " << tminb << " tmaxb=" << tmaxb << endl;
-
     if (tmina < tminb)
         tmin = tminb;
     else
@@ -33,8 +25,6 @@ int main()
         tmax = tmaxa;
     else
         tmax = tmaxb;
-
     cout << tmin << " " << tmax;
-
     return 0;
 }
